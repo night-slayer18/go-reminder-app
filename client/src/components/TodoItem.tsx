@@ -3,7 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Todo } from "./TodoList";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { BASE_URL } from "../src/App";
+import { BASE_URL } from "../App";
 
 const TodoItem = ({ todo }: { todo: Todo }) => {
 	const queryClient = useQueryClient()
