@@ -2,6 +2,7 @@ import { Button, Flex, Input, Spinner } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { BASE_URL } from "../src/App";
 
 const TodoForm = () => {
 	const [newTodo, setNewTodo] = useState("");
@@ -15,7 +16,7 @@ const TodoForm = () => {
 				return alert("Todo can't be empty")
 			}
 			try {
-				const response = await fetch("http://localhost:5000/api/todos",{
+				const response = await fetch(BASE_URL+ `/todos`,{
 					method:"POST",
 					headers:{
 						"Content-Type":"application/json",
